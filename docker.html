@@ -31,7 +31,7 @@
    border-color: #474545;
    margin: 0 auto;
    padding: 10px;
-   opacity: 0.6;
+   opacity: 0.9;
    overflow:inherit;
  }
  #textBox {
@@ -93,9 +93,10 @@
 
   <script>
     function lw() {
-    
+    alert("request");
     var xhr = new XMLHttpRequest();
     xhr.open("GET","http://13.232.228.54/cgi-bin/docker.py?x="+ document.getElementById("textarea").value,true);
+    alert("sending request");
     xhr.send();
     xhr.onload =  function()  {
     document.getElementById("injected").innerHTML = xhr.responseText ;
